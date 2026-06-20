@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập position CSS</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+
+    :root {
+      --a1-width: 1000px;
+      --a4-width: 800px;
+      --a5-width: 220px;
+      --a5-height: 120px;
+      --a5-left: 200px;
+    }
+
+    /* A1: phần tử lớn để tạo scroll */
+    .a1 {
+      width: var(--a1-width);
+      height: 2000px;
+      margin: 0 auto;
+      border: 4px solid black;
+      background: #fff3cd;
+      position: relative;
+      padding-top: 90px;
+    }
+
+    /* A2: luôn nằm trên top màn hình */
+    .a2 {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: var(--a1-width);
+      height: 70px;
+      background: #ff7675;
+      border: 3px solid red;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* A3: luôn nằm dưới bottom màn hình */
+    .a3 {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: var(--a1-width);
+      height: 70px;
+      background: #74b9ff;
+      border: 3px solid blue;
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* A4: nằm dưới A2 và scroll theo A1 */
+    .a4 {
+      width: var(--a4-width);
+      height: 1400px;
+      margin: 0 auto;
+      border: 4px solid green;
+      background: #dff9fb;
+      position: relative;
+      padding-top: 40px;
+    }
+
+    /* A5: nằm trong A4, cách trái A4 200px, sticky ở giữa màn hình */
+    .a5 {
+      position: sticky;
+
+      /*
+        Đưa A5 vào giữa màn hình theo chiều dọc:
+        50vh là nửa chiều cao màn hình
+        trừ đi một nửa chiều cao A5
+      */
+      top: calc(50vh - var(--a5-height) / 2);
+
+      margin-left: var(--a5-left);
+      width: var(--a5-width);
+      height: var(--a5-height);
+
+      background: #ffeaa7;
+      border: 4px solid orange;
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* A6: luôn nằm giữa A4 và nằm trên A5 */
+    .a6 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 260px;
+      height: 120px;
+      background: #a29bfe;
+      border: 4px solid purple;
+      z-index: 3;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* Responsive: màn hình <= 780px thì A1 -> A5 giảm width một nửa */
+    @media (max-width: 780px) {
+      :root {
+        --a1-width: 500px;
+        --a4-width: 400px;
+        --a5-width: 110px;
+        --a5-left: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a2">A2 - Fixed Top</div>
+  <div class="a3">A3 - Fixed Bottom</div>
+
+  <div class="a1">
+    A1 - width 1000px, height 2000px
+
+    <div class="a4">
+      A4 - nằm dưới A2 và scroll theo A1
+
+      <div class="a5">
+        A5 - Sticky
+      </div>
+
+      <div class="a6">
+        A6 - Center A4, trên A5
+      </div>
+    </div>
+  </div>
+</body>
+</html>
