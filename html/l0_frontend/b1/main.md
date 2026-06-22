@@ -96,3 +96,9 @@ Khai báo thẻ Meta Viewport: Bắt buộc phải thêm thẻ <meta name="viewp
 Sử dụng đơn vị tương đối: Hạn chế dùng kích thước cố định như px (pixel) cho các phần tử bao quát. Thay vào đó, hãy dùng %, vw, vh, em, rem để các phần tử có thể tự động co giãn theo khung nhìn
 .
 Làm cho hình ảnh linh hoạt: Để hình ảnh hay video không bị tràn ra ngoài màn hình trên điện thoại, luôn nhớ thiết lập CSS: max-width: 100%; height: auto;
+
+
+left: 0 → sát mép trái.
+top: 0 → sát mép trên.
+right: 0 → sát mép phải.
+bottom: 0 → sát mép dưới.
