@@ -327,6 +327,13 @@ Cú pháp:
 
 - các display: block (tự xuống dòng, chiếm toàn bộ chiều ngang, có thể set w, h), inline(ko tự xuống dòng, chiếm vừa nội dung, không set w, h hiệu quả như block), display: inline-block kết hợp không tự xuống dòng, có thể set w h 
 
++ The Inline: giá trị mặc định của các thẻ văn bản như <span>. nằm liền kề sát nhau trên cùng một dòng, chỉ xuống dòng khi gặp giới hạn kích thước, ko thể set w, h
+
++ thẻ block: khối, giá trị mặc định của các thẻ div. chiếm toàn bộ không gian của các dòng, đẩy các phần tử tiếp theo xuống một dòng mới bất kể nội dung là ngắn hay dài. Có thể chỉ định w, h
+
++ inline-block: kết hợp, có thể nằm cạnh nhau trên cùng một dòng, có thể chỉn w, h
++ none: giấu ptu khỏi trang web, 
++ cấu trúc linh hoạt: flex cho một phần tử cha, các phần tử con bên trong sẽ có khả năng tự động co giãn. MỘt số thuộc tính đi kèm, flex-wrap: cho phép tự động xuống dòng khi màn hình thu hẹp, gap: tạo khoảng cách đều, flex: quy định khả năng co giãn ptu con, flex-dỉection: quy định hướng xếp của các ptu con: row hay column, justify-content: căn chỉnh các phần tử con theo trục chính, space-between: đẩy các ptu đều ra 2 mép, align-items... 
 
 - Các giá trị position: static(nằm theo luồng bình thường, top, right, lèt bottom không có tác dụng), 
 relative: dịch chuyển so với vị trí ban đầu (vẫn giữ chỗ cũ, có thể làm mốc cho abolute bên trong),

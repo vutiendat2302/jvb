@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 2</title>
+        <style>
+            .ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .li {
+                display: flex;
+                min-width: 50px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+            }
+
+            .li:nth-child(even) {
+                border: 4px solid blue;
+                background-color: blueviolet;
+            }
+
+            .li:nth-child(odd) {
+                border: 4px solid red;
+                background-color: brown;
+            }
+
+            .li span.spec {
+                display: inline;
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin: 2px;
+                padding: 0;
+                position: relative;
+            }
+
+            @media (min-width: 425px) {
+                .li:nth-child(odd) {
+                    width: 20px;
+                    background-color: yellow;
+                }
+                .li:nth-child(even) {
+                    width: 50px;
+                    background-color: red;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .li:nth-child(odd) {
+                    width: 30px;
+                    background-color: brown;
+                }
+                .li:nth-child(even) {
+                    width: 40px;
+                    background-color: yellow;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .li:nth-child(odd) {
+                    width: 30px;
+                    background-color: yellow;
+                }
+                .li:nth-child(even) {
+                    width: 40px;
+                    background-color: purple;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .li:nth-child(odd) {
+                    width: 50px;
+                    background-color: purple;
+                }
+                .li:nth-child(even) {
+                    width: 100px;
+                    background-color: pink;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--Ve 12 phan tu giong nhau bang the li cua UL A1-A12-->
+        <!--Sap xep cac phan tu luon nam trong man hinh du co doi kich
+        thuoc trinh duyet, hoac thay doi kich thu, cac ptu khong de len nhau
+        ben trong moi phan tu co 1 the inline va co the set duoc width
+        heght, margin, padding, va position cho the do
+        
+        2. To mau: voi phan tu so thu tu le la mau do, chan la mau xanh
+        3. Cũng yêu cầu trên nhưng không dùng thẻ Li mà dùng thẻ Span để vẽ các phần tử
+        4. Thay đổi css với mỗi kích cỡ màn hình khác nhau theo Mobile First:
+        Màn hình min-width 320px: phần tử lẻ màu đỏ with 20px, phần tử chẵn màu xanh with-30px
+        Màn hình min-width 425px: phần tử lẻ màu vàng with 20px, phần tử chẵn màu đỏ with-50px
+        Màn hình min-width 768px: phần tử lẻ màu xanh nâu with 30px, phần tử chẵn màu vàng with-40px
+        Màn hình min-width 992px: phần tử lẻ màu vàng  with 30px, phần tử chẵn màu tím with-40px
+        Màn hình min-width 1200: phần tử lẻ màu tím with 50px, phần tử chẵn màu hồng with-100px
+        Yêu cầu các phần tử luôn xếp trong 1 màn hình không được phép có phần tử tràn vượt quá chiều rộng màn hình (overflow)-->
+
+        <ul class="ul">
+            <li class="li">
+                <span class="spec">A1</span>
+            </li>
+            <li class="li"><span class="spec">A2</span></li>
+            <li class="li"><span class="spec">A3</span></li>
+            <li class="li"><span class="spec">A4</span></li>
+            <li class="li"><span class="spec">A5</span></li>
+            <li class="li"><span class="spec">A6</span></li>
+            <li class="li"><span class="spec">A7</span></li>
+            <li class="li"><span class="spec">A8</span></li>
+            <li class="li"><span class="spec">A9</span></li>
+            <li class="li"><span class="spec">A10</span></li>
+            <li class="li"><span class="spec">A11</span></li>
+            <li class="li"><span class="spec">A12</span></li>
+
+        </ul>
+
+        <br>
+        
+         <div class="ul">
+            <span class="li"><span class="spec">A1</span></span>
+            <span class="li"><span class="spec">A2</span></span>
+            <span class="li"><span class="spec">A3</span></span>
+            <span class="li"><span class="spec">A4</span></span>
+            <span class="li"><span class="spec">A5</span></span>
+            <span class="li"><span class="spec">A6</span></span>
+            <span class="li"><span class="spec">A7</span></span>
+            <span class="li"><span class="spec">A8</span></span>
+            <span class="li"><span class="spec">A9</span></span>
+            <span class="li"><span class="spec">A10</span></span>
+            <span class="li"><span class="spec">A11</span></span>
+            <span class="li"><span class="spec">A12</span></span>
+        </div>
+        
+    </body>
+
+</html>
