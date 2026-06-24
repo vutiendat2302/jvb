@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    
+}
+
+
+.open-btn {
+    border: none;
+    background: green;
+    font-size: 18px;
+    color: white;
+    width: 200px;
+    height: 80px;
+    text-align:center;
+    text-justify:center;
+}
+
+.open-btn:hover {
+    background: red;
+}
+
+.modal {
+    position: fixed;
+    background: gray;
+    display:flex;
+    justify:center;
+    align: center;
+}
+
+.login-box {
+    width: 400px;
+    background: white;
+    position:relative;
+    h2 {
+        text-align:center;
+    }
+}
