@@ -1,55 +1,51 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html lang="vi">
     <head>
         <Title>login</Title>
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <link rel = "stylesheet" href="style.css">
-
+        
     </head>
 
     <body>
-        <button class="open-btn">
-            Dang nhap he thong
+        <button id="openLoginBtn" class="open-btn">
+            Đăng nhập hệ thống 
         </button>
 
-        <div>
+        <div id = "loginModal" class="modal">
             <div class="login-box">
-                <span></span>
+                <button id="closeModalBtn" class="close-btn">&times;</button>
                 <h2>Member Login</h2>
             
 
                 <div>
-                    <input type="text" id="username" placeholder="Username">
-
+                    <input type="text" id="username" placeholder="Username" class="input">
                 </div>
 
                 <div>
-                    <input type="password" id="password" placeholder="Password">
+                    <input type="password" id="password" placeholder="Password" class="input">
                 </div>
 
-                <button>
+                <button class="login-btn" id = "login-btn">
                     Login 
                 </button>
 
                 <div>
-                    <button>
+                    <button class="forgot-btn">
                         Forgot Password?
                     </button>
                 </div>
             </div>
         </div>
+        <script src="index.js"></script>
     </body>
 
     <!--Tạo Login form sử dụng HTMS, CSS JS thuần
-    1. Có 1 button "Đăng nhập hệ thống". 
-    2. Click button hiện Modal login như hình bên (Giống hình bên nhất có thể)
     3. Khi ấn login sẽ có biểu tượng Loading thay thế chữ login. Tài khoản login mặc địch admin/admin
     - Không nhập username/password hiện thông báo "Vui lòng nhập đầy đủ thông tin" dưới ô input
     - Nhập username/password sai (khác admin/admin) thông báo hiện dòng chữ đỏ: "Tài khoản hoặc mật khẩu không đúng" dưới input của pasword.
     - Nhập username/password đúng (admin/admin) đóng form, button "Đăng nhập hệ thống" hiển thị thành "Đăng nhập thành công"
-
-    Sử dụng HTML, CSS-->
-
-
+-->
+    
 </html>
 

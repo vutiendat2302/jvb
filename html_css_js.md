@@ -410,6 +410,12 @@ c. media query: dùng để resposive theo kích thước màn hình, làm giao 
 - Sử dụng các framwork css: bootstrap, tailwind css, 
 
 
+3. Chuẩn CSS hiện nay: 
+- Pseudo-class: dùng : 
+- Pseudo-element: dùng ::
+
+
+
 # JavaSCript
 - chấp nhận cả ngoặc kép và ngoặc đơn 
 - có thể đặt bất kỳ đoạn mã nào vào html 
