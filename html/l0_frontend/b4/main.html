@@ -3,11 +3,20 @@
     <head>
         <Title>login</Title>
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-        <link rel = "stylesheet" href="style.css">
-        
+        <link rel = "stylesheet" href="css/style.css">
+        <link rel="stylesheet" href = "css/icon.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
 
     <body>
+
+        <div id = "dashboard" class="dashboard-box">
+            <h2>Dang nhap thanh cong</h2>
+            <p> Chao mung Admin da quay lai he thong</p>
+            <button id = "logoutBtn" class="logout-btn">Dang xuat</button>
+
+        </div>
+
         <button id="openLoginBtn" class="open-btn">
             Đăng nhập hệ thống 
         </button>
@@ -15,24 +24,36 @@
         <div id = "loginModal" class="modal">
             <div class="login-box">
                 <button id="closeModalBtn" class="close-btn">&times;</button>
-                <h2>Member Login</h2>
+                <h2 style="margin-top: 10px;">Member Login</h2>
             
 
-                <div>
+                <div class="login-btn-box">
+                    <!-- <i class="fa-solid fa-user"></i> -->
+                    <img src ="pic/user-solid-full.svg" class="input-icon">
                     <input type="text" id="username" placeholder="Username" class="input">
                 </div>
+                <p id="userError" class="error-message"></p>
 
-                <div>
+                <div class="login-btn-box">
+                    
+                    <i class="fa-solid fa-key"></i>
                     <input type="password" id="password" placeholder="Password" class="input">
                 </div>
+                <p id="passError" class="error-message"></p>
 
-                <button class="login-btn" id = "login-btn">
-                    Login 
-                </button>
+                <div class="login-btn-box">
+                    <button class="login-btn" id = "loginBtn">
+                        Login 
+                    </button>
+                </div>
+                
 
-                <div>
+                <div class="forgot-div">
                     <button class="forgot-btn">
                         Forgot Password?
+                    </button>
+                    <button class="forgot-btn">
+                        Create new account 
                     </button>
                 </div>
             </div>
@@ -40,12 +61,11 @@
         <script src="index.js"></script>
     </body>
 
-    <!--Tạo Login form sử dụng HTMS, CSS JS thuần
-    3. Khi ấn login sẽ có biểu tượng Loading thay thế chữ login. Tài khoản login mặc địch admin/admin
-    - Không nhập username/password hiện thông báo "Vui lòng nhập đầy đủ thông tin" dưới ô input
-    - Nhập username/password sai (khác admin/admin) thông báo hiện dòng chữ đỏ: "Tài khoản hoặc mật khẩu không đúng" dưới input của pasword.
-    - Nhập username/password đúng (admin/admin) đóng form, button "Đăng nhập hệ thống" hiển thị thành "Đăng nhập thành công"
--->
-    
+    <!--
+    - Loading: không ở giữa
+    - Create new account 
+    - Submin or I already have an account 
+    -->
+
 </html>
 
