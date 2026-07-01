@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e9ecef 100%);
+}
+
+.dashboard-box {
+  display: none;
+}
+
+.error-message {
+  color: #dc3545;
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.modal-content {
+  border: none;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+#openLoginBtn {
+  min-width: 220px;
+}
