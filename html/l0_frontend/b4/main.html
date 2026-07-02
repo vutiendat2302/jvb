@@ -35,29 +35,44 @@
                 <p id="userError" class="error-message"></p>
 
                 <div class="login-btn-box">
-                    
                     <i class="fa-solid fa-key"></i>
                     <input type="password" id="password" placeholder="Password" class="input">
                 </div>
                 <p id="passError" class="error-message"></p>
 
+                <div class="login-btn-box hidden" id="newPasswordField">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" id="newPassword" placeholder="New Password" class="input">
+                </div>
+                <p id="newPassError" class="error-message"></p>
+
+                <div class="login-btn-box hidden" id="phoneField">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="phone" placeholder="Số điện thoại" class="input">
+                </div>
+                <p id="phoneError" class="error-message"></p>
+
                 <div class="login-btn-box">
-                    <button class="login-btn" id = "loginBtn">
-                        Login 
+                    <button class="login-btn" id="loginBtn">
+                        Login
                     </button>
                 </div>
-                
+                <p id="actionMessage" class="success-message hidden"></p>
 
                 <div class="forgot-div">
-                    <button class="forgot-btn">
-                        Forgot Password?
+                    <button type="button" class="forgot-btn" id="forgotPasswordBtn">
+                        Đổi mật khẩu 
                     </button>
-                    <button class="forgot-btn">
-                        Create new account 
+                    <button type="button" class="forgot-btn" id="createAccountBtn">
+                        Create new account
+                    </button>
+                    <button type="button" class="forgot-btn hidden" id="backToLoginBtn">
+                        Quay lại đăng nhập
                     </button>
                 </div>
             </div>
         </div>
+
         <script src="index.js"></script>
     </body>
 
